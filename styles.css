@@ -1,0 +1,148 @@
+/* Reset */
+*{
+    box-sizing: border-box;
+}
+
+nav ul, nav ol{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Page styling */
+header{
+    background-color: black;
+    justify-items: center;
+    margin-bottom: 50px;
+    height: 220px;
+    align-content: center;
+
+}
+
+header div{
+    height: 56px;
+    background-color: #FFF;
+    border-bottom: 2px solid #000;
+    position: absolute;
+    top: 165px;
+}
+
+h3{
+    color: #FFF;
+    font-family: "Instrument Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1{
+    color: #FFF;
+    font-family: "Instrument Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 50px;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 100px;
+    top: -15px;
+}
+
+main{
+    display: flex;
+    gap: 23px;
+    justify-self: center;
+}
+
+section{
+    border: 2px solid #000;
+    background: #FFF;
+    padding: 19px;
+}
+
+#projects{
+    margin-bottom: 23px;
+}
+
+#projects, #toolkit{
+    width: 316px;
+    height: 197px;
+}
+
+#research, #development{
+    width: 316px;
+    height: 336px;
+}
+
+#capstone{
+    background-color: #000;
+    position: absolute;
+    width: 655px;
+    height: 65px;
+    left: 442px;
+    top: 622px;
+    display: flex;
+    align-items: end;
+
+}
+
+#capstone h2, #capstone ul, #capstone a{
+    color: #FFF;
+}
+
+#capstone ul{
+    display: flex;
+}
+
+h2{
+    color: #000;
+    font-family: "Instrument Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+ul{
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+a{
+    color: #000;
+    font-family: "Instrument Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 32px */
+}
+
+li:hover{
+    color: #FFF;
+    font-family: "Instrument Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 32px */
+    background: #8484FF;
+}
