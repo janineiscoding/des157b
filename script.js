@@ -2,28 +2,28 @@
     'use strict';
 
     const button = document.querySelector('button');
-    const body = document.querySelector('body');
-    const banner = document.querySelector('#banner');
-    const sections = document.querySelectorAll('section')
-    let mode = 'dark';
+    const headerImg = document.querySelector('header > img');
+    const mainImg = document.querySelectorAll('main img');
+    const footer = document.querySelector('footer');
+    let mode = 'default';
 
     button.addEventListener('click', function() {
-        if (mode === 'dark') {
-            body.className = 'switch';
-            banner.className = 'switch';
-            button.className = 'switch';
-            for (const section of sections) {
-                section.className = 'switch';
+        if (mode === 'default') {
+            button.innerHTML = '<img src="images/hide-toggle.svg" alt="hide toggle">';
+            headerImg.className = 'show';
+            for (const images of mainImg) {
+                images.className = 'show';
             }
-            mode = 'light';
+            footer.className = 'show';
+            mode = 'annotate';
         } else {
-            body.removeAttribute('class');
-            banner.removeAttribute('class');
-            button.removeAttribute('class');
-            for (const section of sections) {
-                section.removeAttribute('class');
+            button.innerHTML = '<img src="images/see-toggle.svg" alt="see toggle">';
+            headerImg.className = 'hide';
+            for (const images2 of mainImg) {
+                images2.className = 'hide';
             }
-            mode = 'dark'
+            footer.className = 'hide';
+            mode = 'default'
         }
     })
 })()
