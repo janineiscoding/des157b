@@ -1,4 +1,5 @@
 /* Reset */
+
 *{
     box-sizing: border-box;
 }
@@ -23,6 +24,7 @@ a{
 }
 
 /* Show and Hide Annotations*/
+
 .show{
     display: block;
 }
@@ -32,9 +34,17 @@ a{
 }
 
 /* Page styling */
+
 body{
     background-color: #f7f7f7;
+    justify-self: center;
 }
+
+#container{
+    width: 1200px;
+    height: 750px;
+}
+
 header{
     background-color: rgb(19, 19, 19);
     justify-items: center;
@@ -50,13 +60,7 @@ header div{
     border-bottom: 2px solid rgb(28, 28, 28);
     position: absolute;
     top: 165px;
-    /* max-width: 100vw; */
     overflow-x: hidden;
-}
-
-header > div > img{
-    margin-top: 15px;
-    scale: 2;
 }
 
 h1{
