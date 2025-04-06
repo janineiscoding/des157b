@@ -59,7 +59,7 @@ header > div > img{
     scale: 2;
 }
 
-h3{
+h1{
     color: #dcdcdc;
     font-family: "Instrument Sans";
     font-size: 15px;
@@ -68,7 +68,7 @@ h3{
     line-height: normal;
 }
 
-h1{
+h3{
     color: #dcdcdc;
     font-family: "Instrument Sans";
     font-size: 40px;
