@@ -38,11 +38,13 @@ a{
 body{
     background-color: #f7f7f7;
     justify-self: center;
+    max-width: 1200px;
+    max-height: 750px;
 }
 
 #container{
-    width: 1200px;
-    height: 750px;
+    max-width: 1200px;
+    max-height: 750px;
 }
 
 header{
