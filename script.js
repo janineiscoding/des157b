@@ -31,4 +31,6 @@
             mode = 'default'
         }
     })
+
+    document.querySelector('#container').styles.scale = 'window.innerHeight/750';
 })()
