@@ -1,0 +1,91 @@
+/* Reset */
+
+*{
+    box-sizing: border-box;
+}
+
+nav ul, nav ol{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Styles */
+
+#my-video{
+    z-index: -1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 800px;
+    max-height: 100%;
+}
+
+.fa-spinner{
+    animation: rotation 4s linear infinite;
+}
+
+@keyframes rotation {
+    0%   {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+#text{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    text-align: center;
+}
+
+p{
+    color: whitesmoke;
+    font-family: "Inter";
+    font-size: 20px;
+}
+
+h1{
+    color: whitesmoke;
+    font-family: "Tektur";
+    font-size: 70px;
+    font-weight: 200;
+}
+
+#thought{
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+
+#arrow{
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+}
+
+#sign{
+    position: absolute;
+    rotate: -10deg;
+    left: 10%;
+    bottom: 10%;
+}
+
+.hidden{
+    opacity: 0%;
+}
+
+.showing{
+    opacity: 100%;
+}
