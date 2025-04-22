@@ -1,0 +1,66 @@
+{
+    "battery_life": "70%",
+    "battery_usage": [
+      {
+        "day": "Sunday",
+        "date": "4/13",
+        "usage_percent": 250,
+        "usage_time": "10hr 3min"
+      },
+      {
+        "day": "Monday",
+        "date": "4/14",
+        "usage_percent": 115,
+        "usage_time": "4hr 20min"
+      },
+      {
+        "day": "Tuesday",
+        "date": "4/15",
+        "usage_percent": 100,
+        "usage_time": "2hr 6min"
+      },
+      {
+        "day": "Wednesday",
+        "date": "4/16",
+        "usage_percent": 95,
+        "usage_time": "4hr 43min"
+      },
+      {
+        "day": "Thursday",
+        "date": "4/17",
+        "usage_percent": 120,
+        "usage_time": "3hr 43min"
+      },
+      {
+        "day": "Friday",
+        "date": "4/18",
+        "usage_percent": 175,
+        "usage_time": "4hr 35min"
+      },
+      {
+        "day": "Saturday",
+        "date": "4/19",
+        "usage_percent": 190,
+        "usage_time": "4hr 39min"
+      },
+      {
+        "day": "Sunday",
+        "date": "4/20",
+        "usage_percent": 175,
+        "usage_time": "7hr 34min"
+      },
+      {
+        "day": "Monday",
+        "date": "4/21",
+        "usage_percent": 110,
+        "usage_time": "1hr 52min"
+      },
+      {
+        "day": "Today",
+        "date": "4/22",
+        "time": "1:15",
+        "usage_percent": 40,
+        "usage_time": "29min"
+      }
+    ]
+  }
