@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Yourself</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Meta tag for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+
 </head>
 <body>
-    <h1>Studio 2: Check Yourself</h1>
+    <h1>My Battery Usage The Last 10 Days</h1>
     <section id="calendar">
         <ul id="day">
             <li>Sun</li>
@@ -18,22 +36,14 @@
             <li>Sat</li>
         </ul>
         <ul id="date">
-            <li>4/13</li>
-            <li>4/14</li>
-            <li>4/15</li>
-            <li>4/16</li>
-            <li>4/17</li>
-            <li>4/18</li>
-            <li>4/19</li>
-            <li>4/20</li>
-            <li>Now</li>
         </ul>
-    </section id="">
-        <h1>Battery Usage: 000%</h1>
+    </section id="battery">
 
-    <section>
-
-    </section>
+    <main>
+        <h2>Battery Usage: <span id="usage"></span>%</h2>
+        <h3><span id="total-time">00hr 00min</span></h3>
+        <img src="images/full.svg" alt="full battery">
+    </main>
     <footer>
         <p>Battery Life: 70%</p>
     </footer>
