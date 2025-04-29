@@ -34,8 +34,9 @@
     const usage = document.querySelector('#usage');
     const totalTime = document.querySelector('#total-time');
 
-    document.querySelector(".day1").addEventListener('click', function(){
-        usage.innerHTML = 'hi';
+    document.querySelector('.day1').addEventListener('click', function(){
+        usage.innerHTML += 'hi';
+        console.log('um');
     });
 
     // document.querySelector('li').addEventListener('click', function(){
