@@ -55,8 +55,6 @@ h1 {
 #day li {
     color: #5E5E5E;
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
     font-family: Inter;
     font-size: 19.246px;
     font-style: normal;
@@ -91,8 +89,6 @@ h1 {
 #date {
     color: #EDEDED;
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
     font-family: Inter;
     font-size: 19.246px;
     font-style: normal;
@@ -126,8 +122,6 @@ img {
 footer p {
     color: #5E5E5E;
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;

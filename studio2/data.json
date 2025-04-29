@@ -2,60 +2,70 @@
     "4/13" : {
         "day": "Sunday",
         "date" : "4/13",
+        "id" : "day1",
         "usage_percent": 250,
         "usage_time": "10hr 3min"
     },
     "4/14" : {
         "day": "Monday",
         "date" : "4/14",
+        "id" : "day2",
         "usage_percent": 115,
         "usage_time": "4hr 20min"
       },
     "4/15" : {
         "day": "Tuesday",
         "date" : "4/15",
+        "id" : "day3",
         "usage_percent": 100,
         "usage_time": "2hr 6min"
       },
     "4/16" : {
         "day": "Wednesday",
         "date" : "4/16",
+        "id" : "day4",
         "usage_percent": 95,
         "usage_time": "4hr 43min"
       },
     "4/17" : {
         "day": "Thursday",
         "date" : "4/17",
+        "id" : "day5",
         "usage_percent": 120,
         "usage_time": "3hr 43min"
       },
     "4/18" : {
         "day": "Friday",
         "date" : "4/18",
+        "id" : "day6",
         "usage_percent": 175,
         "usage_time": "4hr 35min"
       },
     "4/19" : {
         "day": "Saturday",
         "date" : "4/19",
+        "id" : "day7",
         "usage_percent": 190,
         "usage_time": "4hr 39min"
       },
     "4/20" : {
         "day": "Sunday",
         "date" : "4/20",
+        "id" : "day8",
         "usage_percent": 175,
         "usage_time": "7hr 34min"
       },
     "4/21" : {
         "day": "Monday",
         "date" : "4/21",
+        "id" : "day9",
         "usage_percent": 110,
         "usage_time": "1hr 52min"
       },
     "Now" : {
         "day": "Today",
         "date" : "Now",
+        "id" : "day10",
         "time": "1:15",
         "usage_percent": 40,
         "usage_time": "29min"

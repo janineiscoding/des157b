@@ -13,14 +13,14 @@
         const data = await myBattery.json();
         globalData = data;
         document.querySelector('#date').innerHTML = allDays(data);
-    }
+    } 
     
     function allDays(data){
         let html = '';
         const dataPoints = Object.keys(data);
         console.log(dataPoints);
         dataPoints.forEach(function(eachDate){
-            html += `<li id="${data[eachDate].date}">${data[eachDate].date}</li>`;
+            html += `<li class="${data[eachDate].id}">${data[eachDate].date}</li>`;
             document.querySelector('li').addEventListener('click', function(){
                 const newValue = this.value;
                 updateInterface(newValue, globalData);
@@ -28,15 +28,22 @@
         });
         return html;
     }
-    
-    function updateInterface(value, jsonData){
-        let html = ''
-        html += `at ${jsonData[value].time} I was feeling ${feeling[ jsonData[value].mood] } because of: ${jsonData[value].reason}`;
-        html += '</p>';
-        $('#usage').innerHTML = `${data[eachDate].usage_percent}`;
-        document.querySelector('#result').innerHTML = html;
-    }
 
     getData();
+
+    const usage = document.querySelector('#usage');
+    const totalTime = document.querySelector('#total-time');
+
+    document.querySelector(".day1").addEventListener('click', function(){
+        usage.innerHTML = 'hi';
+    });
+
+    // document.querySelector('li').addEventListener('click', function(){
+    //     if (className == day1){
+    //         usage.innerHTML = 'number';
+    //     }
+    // });
+
+    
 
 })();
