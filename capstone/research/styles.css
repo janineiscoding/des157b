@@ -1,0 +1,73 @@
+/* Reset */
+
+*{
+    box-sizing: border-box;
+}
+
+nav ul, nav ol{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+li, ul, a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Styles */
+body{
+    background-color: #f7f7f7;
+    justify-self: center;
+    align-self: center;
+    margin: 0 300px;
+}
+
+h1{
+    font-family: "Instrument Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin: 30px 0;
+}
+
+article {
+    margin: 20px 0;
+}
+
+h2{
+    font-family: "Instrument Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+
+p, li{
+    font-family: "Instrument Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+img{
+    width: 500px;
+    justify-self: center;
+    padding: 20px 0;
+}
+
+aside {
+    margin: 80px 0;
+}
