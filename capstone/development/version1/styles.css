@@ -48,36 +48,21 @@ body{
 
 main{
     height: 100vh;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
     display: flex;
-    /* flex-direction: column; */
     text-align: center;
-    /* align-content: center; */
-    /* justify-content: center; */
     justify-items: center;
-    /* justify-self: center; */
     align-self: center;
 }
 
 section{
-    /* height: 600px; */
     flex: 1;
     display: flex;
-    /* align-self: center; */
-    /* justify-self: center; */
     align-items: center;
     justify-content: center;
 }
 
 #left, #right{
-    /* display: flex;
-    position: absolute;
-    top: 15%;
-    left: 5%; */
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* transform: translate(-50% -50%); */
     gap: 10vh;
     width: 30vw;
 }
@@ -95,7 +80,6 @@ h2{
 
 div {
     width: 25vw;
-    /* align-self: stretch; */
 }
 
 div ul {

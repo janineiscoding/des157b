@@ -1,0 +1,54 @@
+/* Reset */
+
+*{
+    box-sizing: border-box;
+}
+
+nav ul, nav ol{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Start Styling */
+body{
+    padding: 50px 20vw;
+}
+
+h1{
+    color: rgb(33, 33, 33);
+    font-family: "Instrument Sans";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+p{
+    color: rgb(33, 33, 33);
+    font-family: "Instrument Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+em{
+    font-style: normal;
+    font-weight: 700;
+}
