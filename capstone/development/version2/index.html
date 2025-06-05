@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Me and Paper Bag</title>
+        
+        <!-- Normalize CSS for browser compatability -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+        <!-- Add link to any google fonts used here -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        
+        <!-- My Styles -->
+        <link href="styles.css" rel="stylesheet">
+    
+        <!-- Meta tag for mobile support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- My Script -->
+        <script src="script.js" defer></script>
+    </head>
+<body>
+    <main>
+        <section id="paper-left" class="hide">
+            <div id="location">
+                <h2>Where are you going?</h2>
+                <ul>
+                    <li id="school">School</li>
+                    <li id="store">Store</li>
+                    <li id="park">Park</li>
+                    <li id="office">Office</li>
+                </ul>
+            </div>
+    
+            <div id="textbook" class="no-opacity">
+                <h2>You hope the textbooks wouldn’t be too heavy.</h2>
+                <ul>
+                    <li>It is heavy!</li>
+                    <li>It's not heavy.</li>
+                </ul>
+            </div>
+    
+            <div id="sad" class="no-opacity">
+                <h2>Darn! The bag broke!</h2>
+                <img src="../../images/sad.svg" alt="sad face">
+            </div>
+        </section>
+
+        <section id="center">
+            <h1>Which bag do you want to use?</h1>
+            <ul id="bags">
+                <!-- Papers -->
+                <li id="paper-route" class="show"><img src="../../images/paper-bag.svg" alt="paper bag"></li>
+                <li id="news-svg" class="hide"><img src="../../images/news-paper.svg" alt="news paper"></li>
+                <li id="crane-svg" class="hide"><img src="../../images/crane.svg" alt="crane"></li>
+                <li id="cardboard-svg" class="hide"><img src="../../images/cardboard.svg" alt="cardboard"></li>
+                <li id="paper-bag-svg" class="hide"><img src="../../images/paper-bag.svg" alt="paper bag"></li>
+
+                <!-- Plastic -->
+                <li id="plastic-route" class="show"><img src="../../images/plastic-bag.svg" alt="plastic bag"></li>
+
+                <!-- Tote -->
+                <li id="tote-route" class="show"><img src="../../images/tote-bag.svg" alt="tote bag"></li>
+            </ul>
+        </section>
+
+        <section id="paper-right" class="hide">
+            <div id="bin" class="no-opacity">
+                <h2>Which garbage bin does it belong to?</h2>
+                <ul>
+                    <li id="recycle-bin">Recycle</li>
+                    <li>Trash</li>
+                    <li>Compost</li>
+                </ul>
+            </div>
+
+            <div id="repurpose" class="no-opacity">
+                <h2>Recycling centers remade your paper bag into a...</h2>
+                <ul>
+                    <li id="news-paper">news paper</li>
+                    <li id="crane"> crane</li>
+                    <li>cardboard</li>
+                    <li>paper bag</li>
+                </ul>
+            </div>
+
+            <div id="end" class="no-opacity">
+                <h2><em>Recycling is Repurposing.</em><br><br>Thank you for making the right choice!</h2>
+                <ul>
+                    <li id="news-return">Return →</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
