@@ -44,6 +44,7 @@
     newsSVG.addEventListener('mouseover', function() {
         if (!routeClicked) {
             h1Tag.textContent = 'Recycling is Repurposing – News Paper';
+            newsSVG.style.cursor = 'default';
         }
     });
     
@@ -62,6 +63,7 @@
     craneSVG.addEventListener('mouseover', function() {
         if (!routeClicked) {
             h1Tag.textContent = 'Recycling is Repurposing – Paper Crane';
+            craneSVG.style.cursor = 'default';
         }
     });
         
@@ -126,6 +128,7 @@
     loveSVG.addEventListener('mouseover', function() {
         if (!routeClicked) {
             h1Tag.textContent = 'Love My Tote';
+            loveSVG.style.cursor = 'default';
         }
     });
         
@@ -164,6 +167,8 @@
     document.querySelector('#heavy1').addEventListener('click', function(){
         document.querySelector('#sad').className = 'yes-opacity';
         document.querySelector('#heavy1').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        document.querySelector('#broke-bag').className = 'show';
     });
 
     for( const eachLi of document.querySelectorAll("#textbook ul li")){
@@ -274,7 +279,7 @@
     document.querySelector('#news-paper').addEventListener('click', function(){
         document.querySelector('#end').className = 'yes-opacity';
         h1Tag.innerHTML = 'News Paper';
-        startPaper.className = 'hide';
+        document.querySelector('#broke-paper').className = 'hide';
         document.querySelector('#news-svg').className = 'show';
         endPaper = 'news';
     });
@@ -293,7 +298,7 @@
     document.querySelector('#crane').addEventListener('click', function(){
         document.querySelector('#end').className = 'yes-opacity';
         h1Tag.innerHTML = 'Paper Crane';
-        startPaper.className = 'hide';
+        document.querySelector('#broke-paper').className = 'hide';
         document.querySelector('#crane-svg').className = 'show';
         endPaper = 'crane';
     });

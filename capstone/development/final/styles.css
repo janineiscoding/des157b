@@ -183,15 +183,19 @@ h1 {
     cursor: pointer;
 }
 
-#start-paper, #start-plastic, #start-tote{
+/* #start-paper, #start-plastic, #start-tote{
+    padding: 0 41px;
+} */
+
+#start-paper img{
     padding: 0 41px;
 }
 
-#plastic-route img{
+#start-plastic img{
     padding: 30.5px 15px;
 }
 
-#tote-route img{
+#start-tote img{
     padding: 32px 0;
 }
 
