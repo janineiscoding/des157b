@@ -51,10 +51,53 @@
                     <li id="not-heavy2">It's not heavy.</li>
                 </ul>
             </div>
+
+            <div id="rain" class="hide">
+                <h2>There was a sudden heavy rain as you were walking your dog.</h2>
+                <ul>
+                    <li id="heavy3">Run home</li>
+                    <li id="not-heavy3">Walk home</li>
+                </ul>
+            </div>
+
+            <div id="accident" class="hide">
+                <h2>You saw your co-worker struggling to carry their things.</h2>
+                <ul>
+                    <li id="heavy4">You lend your bag to them.</li>
+                    <li id="not-heavy4">You strongly want to lend your bag!</li>
+                </ul>
+            </div>
     
             <div id="sad" class="hide">
-                <h2>Darn! The bag broke!</h2>
+                <h2></h2>
                 <img src="../../images/sad.svg" alt="sad face">
+            </div>
+
+            <div id="drop" class="hide">
+                <h2></h2>
+                <img src="../../images/apple.svg" alt="water droplets">
+            </div>
+
+            <div id="wet" class="hide">
+                <h2></h2>
+                <img src="../../images/droplets.svg" alt="water droplets">
+            </div>
+
+            <div id="rip" class="hide">
+                <h2>The paper bag did not come back intact.</h2>
+                <img src="../../images/sweat.svg" alt="sweating face">
+            </div>
+        </section>
+
+        <section id="plastic-left" class="hide">
+            <div id="plastic-location">
+                <h2>Where are you going?</h2>
+                <ul>
+                    <li id="plastic-school">School</li>
+                    <li id="plastic-store">Store</li>
+                    <li id="plastic-park">Park</li>
+                    <li id="plastic-office">Office</li>
+                </ul>
             </div>
         </section>
 
@@ -70,11 +113,11 @@
             </div>
 
             <div id="continue" class="hide">
-                <h2>You brought your bag back home and it’s ready for another adventure!</h2>
+                <h2>You brought your bag back home and it’s ready for another day of adventure!</h2>
             </div>
 
             <div id="condition" class="hide">
-                <h2>Your tote bag has stayed with you for the last 3 years.<br><br>How is your tote doing?</h2>
+                <h2>Your tote bag has stayed with you for 3 years.<br><br>How is your tote doing?</h2>
                 <ul>
                     <li id="not-throw">It’s not broken or dirty yet.</li>
                     <li id="throw">I’m ready to throw it away.</li>
@@ -93,7 +136,7 @@
                     <li id="news-svg" class="hide"><img src="../../images/news-paper.svg" alt="news paper"></li>
                     <li id="crane-svg" class="hide"><img src="../../images/crane.svg" alt="crane"></li>
                     <li id="cardboard-svg" class="hide"><img src="../../images/cardboard.svg" alt="cardboard"></li>
-                    <li id="paper-bag-svg" class="hide"><img src="../../images/paper-bag.svg" alt="paper bag"></li>
+                    <li id="paper-bag-svg" class="hide"><img src="../../images/new-paper-bag.svg" alt="paper bag"></li>
                 </ul>
                 <!-- Plastic -->
                 <ul id="plastic-route">
@@ -105,6 +148,8 @@
                     <li id="start-tote" class="show"><img src="../../images/tote-bag.svg" alt="tote bag"></li>
                     <li id="old-tote-svg" class="hide"><img src="../../images/old-tote.svg" alt="old tote bag"></li>
                     <li id="love-tote-svg" class="hide"><img src="../../images/love-tote.svg" alt="love tote bag"></li>
+                    <li id="trash-tote-svg" class="hide"><img src="../../images/trash-tote.svg" alt="trash tote bag"></li>
+                    <li id="old-trash-tote-svg" class="hide"><img src="../../images/old-trash-tote.svg" alt="old trash tote bag"></li>
                  </ul>
             </div>
         </section>
@@ -115,8 +160,8 @@
                 <h2>Which garbage bin does it belong to?</h2>
                 <ul>
                     <li id="recycle-bin">Recycle</li>
-                    <li>Trash</li>
-                    <li>Compost</li>
+                    <li id="trash-bin">Trash</li>
+                    <li id="compost-bin">Compost</li>
                 </ul>
             </div>
 
@@ -125,17 +170,21 @@
                 <ul>
                     <li id="news-paper">news paper</li>
                     <li id="crane"> crane</li>
-                    <li>cardboard</li>
-                    <li>paper bag</li>
+                    <li id="cardboard">cardboard</li>
+                    <li id="new-paper-bag">paper bag</li>
                 </ul>
             </div>
 
             <div id="end" class="no-opacity">
-                <h2><em>Recycling is Repurposing.</em><br><br>Thank you for making the right choice!</h2>
+                <h2><em>Recycling is Repurposing.</em><br><br>Thank you for recycling your papers!</h2>
                 <ul>
-                    <li id="news-return">Return →</li>
+                    <li id="paper-return">Return →</li>
                 </ul>
             </div>
+        </section>
+
+        <section id="plastic-right" class="hide">
+
         </section>
 
         <section id="tote-right" class="hide">
@@ -144,7 +193,7 @@
             </div>
 
             <div id="condition2" class="hide">
-                <h2>Your tote bag has stayed with you for the last 6 years.<br><br>How is your tote doing?</h2>
+                <h2>Your tote bag has stayed with you for 6 years.<br><br>How is your tote doing?</h2>
                 <ul>
                     <li id="not-throw2">It’s still not broken or dirty yet.</li>
                     <li id="throw2">I’m ready to throw it away.</li>
@@ -155,6 +204,29 @@
                 <h2><em>Love My Tote.</em><br><br>Thank you for taking care of your tote!</h2>
                 <ul>
                     <li id="love-return">Return →</li>
+                </ul>
+            </div>
+
+            <div id="trash" class="hide">
+                <h2>Your tote ends up in the trash and you never see it again.</h2>
+                <img src="../../images/heart-break.svg" alt="heart break">
+            </div>
+
+            <div id="sustainability" class="hide">
+                <h2>It's a common misconception that tote bags are naturally sustainable. In reality,<br><em>tote bags are only sustainable if used occasionally in the long term.</em></h2>
+            </div>
+
+            <div id="fashion" class="hide">
+                <h2><em>Fast Fashion.</em><br><br>Was it just a trendy fashion choice?</h2>
+                <ul>
+                    <li id="fashion-return">Return →</li>
+                </ul>
+            </div>
+
+            <div id="about-time" class="hide">
+                <h2><em>About Time.</em><br><br>It was a long journey, but you decided to it let go.</h2>
+                <ul>
+                    <li id="time-return">Return →</li>
                 </ul>
             </div>
         </section>

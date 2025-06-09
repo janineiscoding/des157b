@@ -134,18 +134,24 @@ div ul li:hover{
     cursor: default;
 }
 
-#textbook ul, #food ul, #condition ul, #condition2 ul{
+.inactive{
+    color: rgb(188, 188, 188);
+    border-color: rgb(188, 188, 188);
+}
+
+#textbook ul, #food ul, #condition ul, #condition2 ul, #rain ul, #accident ul, #fashion ul, #about-time ul{
     grid-template-columns: auto;
 }
 
-/* ----------------- Left ----------------- */
 
-#sad {
-    justify-items: center;
+/* ----------------- Left ----------------- */
+#sad img, #drop img, #wet img, #rip img, #trash img{
+    height: 100px;
 }
 
 /* ----------------- Center ----------------- */
 #center {
+    display: flex;
     flex-direction: column;
 }
 
@@ -164,6 +170,7 @@ h1 {
     justify-content: center;
     margin-bottom: 56px;
     display: flex;
+    flex-direction: row;
     gap: 100px;
     align-items: center;
 }
@@ -171,9 +178,6 @@ h1 {
 #bags ul li{
     height: auto;
     border: none;
-}
-
-#bags ul li{
     background-color: #ffffff00;
 }
 
@@ -201,7 +205,7 @@ h1 {
 
 
 /* ----------------- Right ----------------- */
-#condition, #condition2, #love{
+div{
     flex-direction: column;
 }
 

@@ -3,6 +3,7 @@
     console.log('reading js');
     const paperRoute = document.querySelector('#paper-route');
     const startPaper = document.querySelector('#start-paper');
+    const brokeBag = document.querySelector('#broke-bag');
     const plasticRoute = document.querySelector('#plastic-route');
     const startPlastic = document.querySelector('#start-plastic');
     const toteRoute = document.querySelector('#tote-route');
@@ -10,6 +11,10 @@
     const h1Tag = document.querySelector('h1');
     const textbook = document.querySelector('#textbook');
     let routeClicked = false;
+    let paperCompleted = false;
+    let plasticCompleted = false;
+    let toteCompleted = false;
+    let defaultText = 'Which bag do you want to use?';
 
     // -------------------------------- Center --------------------------------
     // Paper Hover & Click
@@ -31,7 +36,7 @@
     
     startPaper.addEventListener('mouseout', function() {
         if (!routeClicked) {
-            h1Tag.innerHTML = 'Which bag do you want to use?';
+            h1Tag.innerHTML = `${defaultText}`;
         }
     });
 
@@ -50,7 +55,7 @@
     
     newsSVG.addEventListener('mouseout', function() {
         if (!routeClicked) {
-            h1Tag.textContent = 'Which bag do you want to use?';
+            h1Tag.textContent = `${defaultText}`;
         }
     });
 
@@ -69,14 +74,52 @@
         
     craneSVG.addEventListener('mouseout', function() {
         if (!routeClicked) {
-            h1Tag.textContent = 'Which bag do you want to use?';
+            h1Tag.textContent = `${defaultText}`;
+        }
+    });
+
+    // Cardboard SVG
+    const cardboardSVG = document.querySelector('#cardboard-svg');
+    craneSVG.addEventListener('click', function(){
+        preventDefault();
+    });
+    
+    cardboardSVG.addEventListener('mouseover', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = 'Recycling is Repurposing – Cardboard';
+            cardboardSVG.style.cursor = 'default';
+        }
+    });
+        
+    cardboardSVG.addEventListener('mouseout', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = `${defaultText}`;
+        }
+    });
+
+    // New Paper Bag SVG
+    const newPaperSVG = document.querySelector('#paper-bag-svg');
+    newPaperSVG.addEventListener('click', function(){
+        preventDefault();
+    });
+    
+    newPaperSVG.addEventListener('mouseover', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = 'Recycling is Repurposing – Paper Bag';
+            newPaperSVG.style.cursor = 'default';
+        }
+    });
+        
+    newPaperSVG.addEventListener('mouseout', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = `${defaultText}`;
         }
     });
 
     // Plastic Hover & Click
-    plasticRoute.addEventListener('click', function(){
-        document.querySelector('#paper-left').className = 'show';
-        document.querySelector('#paper-right').className = 'show';
+    startPlastic.addEventListener('click', function(){
+        document.querySelector('#plastic-left').className = 'show';
+        document.querySelector('#plastic-right').className = 'show';
         paperRoute.className = 'hide';
         toteRoute.className = 'hide';
         plasticRoute.style.backgroundColor = '#ffffff00';
@@ -84,15 +127,15 @@
         routeClicked = true;
     });
 
-    plasticRoute.addEventListener('mouseover', function() {
+    startPlastic.addEventListener('mouseover', function() {
         if (!routeClicked) {
             h1Tag.innerHTML = 'Plastic Bag';
         }
     });
     
-    plasticRoute.addEventListener('mouseout', function() {
+    startPlastic.addEventListener('mouseout', function() {
         if (!routeClicked) {
-            h1Tag.innerHTML = 'Which bag do you want to use?';
+            h1Tag.innerHTML = `${defaultText}`;
         }
     });
 
@@ -115,7 +158,7 @@
     
     startTote.addEventListener('mouseout', function() {
         if (!routeClicked) {
-            h1Tag.innerHTML = 'Which bag do you want to use?';
+            h1Tag.innerHTML = `${defaultText}`;
         }
     });
 
@@ -134,12 +177,48 @@
         
     loveSVG.addEventListener('mouseout', function() {
         if (!routeClicked) {
-            h1Tag.textContent = 'Which bag do you want to use?';
+            h1Tag.textContent = `${defaultText}`;
         }
     });
-    // -------------------------------- All --------------------------------    
 
+    // Trash Tote
+    const trashToteSVG = document.querySelector('#trash-tote-svg');
+    trashToteSVG.addEventListener('click', function(){
+        preventDefault();
+    });
+    
+    trashToteSVG.addEventListener('mouseover', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = 'Fast Fashion';
+            trashToteSVG.style.cursor = 'default';
+        }
+    });
+        
+    trashToteSVG.addEventListener('mouseout', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = `${defaultText}`;
+        }
+    });
 
+    // OLD Trash Tote
+    const oldTrashToteSVG = document.querySelector('#old-trash-tote-svg');
+    oldTrashToteSVG.addEventListener('click', function(){
+        preventDefault();
+    });
+    
+    oldTrashToteSVG.addEventListener('mouseover', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = 'About Time';
+            oldTrashToteSVG.style.cursor = 'default';
+        }
+    });
+        
+    oldTrashToteSVG.addEventListener('mouseout', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = `${defaultText}`;
+        }
+    });
+    
     // -------------------------------- Left --------------------------------  
     // Paper  
     for( const eachLi of document.querySelectorAll("#paper-location ul li")){
@@ -155,20 +234,30 @@
     }
 
     document.querySelector('#paper-school').addEventListener('click', function(){
-        textbook.className = 'yes-opacity';
+        textbook.className = 'show';
         document.querySelector('#paper-school').className = 'selected';
     });
 
-    document.querySelector('#paper-store').addEventListener('click', function(){
-        document.querySelector('#food').className = 'yes-opacity';
-        document.querySelector('#paper-store').className = 'selected';
-    });
-
     document.querySelector('#heavy1').addEventListener('click', function(){
-        document.querySelector('#sad').className = 'yes-opacity';
+        document.querySelector('#sad h2').innerHTML = 'Darn! The bag broke from the weight!';
+        document.querySelector('#sad').className = 'show';
         document.querySelector('#heavy1').className = 'selected';
         document.querySelector('#start-paper').className = 'hide';
-        document.querySelector('#broke-bag').className = 'show';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#not-heavy1').addEventListener('click', function(){
+        document.querySelector('#sad h2').innerHTML = 'Darn, the bag broke! The handle was too thin.';
+        document.querySelector('#sad').className = 'show';
+        document.querySelector('#not-heavy1').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
     });
 
     for( const eachLi of document.querySelectorAll("#textbook ul li")){
@@ -182,9 +271,31 @@
         });
     }
 
+    document.querySelector('#paper-store').addEventListener('click', function(){
+        document.querySelector('#food').className = 'show';
+        document.querySelector('#paper-store').className = 'selected';
+    });
+
     document.querySelector('#heavy2').addEventListener('click', function(){
-        document.querySelector('#sad').className = 'yes-opacity';
-        document.querySelector('#heavy2').className = 'selected';
+        document.querySelector('#drop h2').innerHTML = 'Darn! The bag broke from the weight!';
+        document.querySelector('#drop').className = 'show';
+        document.querySelector('#heavy1').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#not-heavy2').addEventListener('click', function(){
+        document.querySelector('#drop h2').innerHTML = 'Darn, the bag broke! Should have double-bagged.';
+        document.querySelector('#drop').className = 'show';
+        document.querySelector('#not-heavy2').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
     });
 
     for( const eachLi of document.querySelectorAll("#food ul li")){
@@ -198,14 +309,114 @@
         });
     }
 
-    document.querySelector('#sad').addEventListener('click', function(){
-        document.querySelector('#bin').className = 'yes-opacity';
+    document.querySelector('#paper-park').addEventListener('click', function(){
+        document.querySelector('#rain').className = 'show';
+        document.querySelector('#paper-park').className = 'selected';
     });
+
+    document.querySelector('#heavy3').addEventListener('click', function(){
+        document.querySelector('#wet h2').innerHTML = 'The paper bag got wet and broke as you ran.';
+        document.querySelector('#wet').className = 'show';
+        document.querySelector('#heavy3').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#not-heavy3').addEventListener('click', function(){
+        document.querySelector('#wet h2').innerHTML = 'It took too long to get home and the wet paper-bag broke.';
+        document.querySelector('#wet').className = 'show';
+        document.querySelector('#not-heavy3').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
+    });
+
+    for( const eachLi of document.querySelectorAll("#rain ul li")){
+        let itemClicked = false;
+        eachLi.addEventListener('click', function(event){
+            if( !itemClicked ){
+                event.target.className = 'selected';
+                document.querySelector('#rain').className = "done";
+                itemClicked = true;
+            }
+        });
+    }
+
+    document.querySelector('#paper-office').addEventListener('click', function(){
+        document.querySelector('#accident').className = 'show';
+        document.querySelector('#paper-office').className = 'selected';
+    });
+
+    document.querySelector('#heavy4').addEventListener('click', function(){
+        document.querySelector('#rip').className = 'show';
+        document.querySelector('#heavy3').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#not-heavy4').addEventListener('click', function(){
+        document.querySelector('#rip').className = 'show';
+        document.querySelector('#heavy3').className = 'selected';
+        document.querySelector('#start-paper').className = 'hide';
+        brokeBag.className = 'show';
+        setTimeout(function(){
+            document.querySelector('#bin').className = 'show';
+        },1000)
+    });
+
+    for( const eachLi of document.querySelectorAll("#accident ul li")){
+        let itemClicked = false;
+        eachLi.addEventListener('click', function(event){
+            if( !itemClicked ){
+                event.target.className = 'selected';
+                document.querySelector('#accident').className = "done";
+                itemClicked = true;
+            }
+        });
+    }
+    // Plastic
+    
+
 
     // Tote bag
     document.querySelector('#tote-school').addEventListener('click', function(){
         document.querySelector('#continue').className = 'show';
-        document.querySelector('#tote-school').className = 'selected';
+        document.querySelector('#tote-location').className = 'selected';
+        setTimeout(function(){
+            document.querySelector('#condition').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#tote-store').addEventListener('click', function(){
+        document.querySelector('#continue').className = 'show';
+        document.querySelector('#tote-location').className = 'selected';
+        setTimeout(function(){
+            document.querySelector('#condition').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#tote-park').addEventListener('click', function(){
+        document.querySelector('#continue').className = 'show';
+        document.querySelector('#tote-location').className = 'selected';
+        setTimeout(function(){
+            document.querySelector('#condition').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#tote-office').addEventListener('click', function(){
+        document.querySelector('#continue').className = 'show';
+        document.querySelector('#tote-location').className = 'selected';
+        setTimeout(function(){
+            document.querySelector('#condition').className = 'show';
+        },1000)
     });
 
     for( const eachLi of document.querySelectorAll("#tote-location ul li")){
@@ -217,15 +428,30 @@
                 itemClicked = true;
             }
         });
-    }
-
-    document.querySelector('#continue').addEventListener('click', function(){
-        document.querySelector('#condition').className = 'show';
-    });   
+    } 
     
     document.querySelector('#not-throw').addEventListener('click', function(){
         document.querySelector('#kept-well').className = 'show';
+        document.querySelector('#start-tote').className = 'hide';
+        document.querySelector('#old-tote-svg').className = 'show';
         document.querySelector('#condition').className = 'selected';
+        // document.querySelector('#condition').className = 'done';
+        setTimeout(function(){
+            document.querySelector('#condition2').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#throw').addEventListener('click', function(){
+        document.querySelector('#trash').className = 'show';
+        startTote.className = 'hide';
+        h1Tag.innerHTML = 'Trash';
+        document.querySelector('#trash-tote-svg').className = 'show';
+        setTimeout(function(){
+            document.querySelector('#sustainability').className = 'show';
+        },1000)
+        setTimeout(function(){
+            document.querySelector('#fashion').className = 'show';
+        },3000)
     });
 
     for( const eachLi of document.querySelectorAll('#condition ul li')){
@@ -239,49 +465,12 @@
         });
     }
 
-    // document.querySelector('#kept-well').addEventListener('click', function(){
-    //     document.querySelector('#condition2').className = 'show';
-    // });
-
-    // document.querySelector('#not-throw2').addEventListener('click', function(){
-    //     document.querySelector('#love').className = 'show';
-    //     document.querySelector('#condition2').className = 'selected';
-    //     document.querySelector('#old-tote-svg').className = 'hide';
-    //     document.querySelector('#love-tote-svg').className = 'show';
-    // });
-
-    // for( const eachLi of document.querySelectorAll("#condition2 ul li")){
-    //     let itemClicked = false;
-    //     eachLi.addEventListener('click', function(event){
-    //         if( !itemClicked ){
-    //             event.target.className = 'selected';
-    //             document.querySelector('#condition2').className = "done"
-    //             itemClicked = true;
-    //         }
-    //     });
-    // }
-
-    document.querySelector('#not-throw').addEventListener('click', function(){
-        document.querySelector('#condition').className = 'selected';
-        document.querySelector('#start-tote').className = 'hide';
-        document.querySelector('#old-tote-svg').className = 'show';
-        document.querySelector('#kept-well').className = 'show';
-    });
-
     // -------------------------------- Right --------------------------------
     // Paper
     let endPaper;
 
     document.querySelector('#recycle-bin').addEventListener('click', function(){
         document.querySelector('#repurpose').className = 'yes-opacity';
-    });
-
-    document.querySelector('#news-paper').addEventListener('click', function(){
-        document.querySelector('#end').className = 'yes-opacity';
-        h1Tag.innerHTML = 'News Paper';
-        document.querySelector('#broke-paper').className = 'hide';
-        document.querySelector('#news-svg').className = 'show';
-        endPaper = 'news';
     });
 
     for( const eachLi of document.querySelectorAll("#bin ul li")){
@@ -295,23 +484,47 @@
         });
     }
 
+    document.querySelector('#trash-bin').addEventListener('click', function(){
+        document.querySelector('#trash-bin').className = 'inactive';
+    });
+
+    document.querySelector('#compost-bin').addEventListener('click', function(){
+        document.querySelector('#compost-bin').className = 'inactive';
+    });
+
+    document.querySelector('#news-paper').addEventListener('click', function(){
+        document.querySelector('#end').className = 'yes-opacity';
+        h1Tag.innerHTML = 'News Paper';
+        brokeBag.className = 'hide';
+        document.querySelector('#news-svg').className = 'show';
+        endPaper = 'news';
+    });
+
     document.querySelector('#crane').addEventListener('click', function(){
         document.querySelector('#end').className = 'yes-opacity';
         h1Tag.innerHTML = 'Paper Crane';
-        document.querySelector('#broke-paper').className = 'hide';
+        brokeBag.className = 'hide';
         document.querySelector('#crane-svg').className = 'show';
         endPaper = 'crane';
     });
 
-    // document.querySelector('#cardboard').addEventListener('click', function(){
-    //     document.querySelector('#end').className = 'yes-opacity';
-    //     h1Tag.innerHTML = 'Cardboard';
-    //     startPaper.className = 'hide';
-    //     document.querySelector('#cardboard-svg').className = 'show';
-    //     endPaper = 'cardboard';
-    // });
+    document.querySelector('#cardboard').addEventListener('click', function(){
+        document.querySelector('#end').className = 'yes-opacity';
+        h1Tag.innerHTML = 'Cardboard';
+        brokeBag.className = 'hide';
+        document.querySelector('#cardboard-svg').className = 'show';
+        endPaper = 'cardboard';
+    });
 
-    document.querySelector('#news-return').addEventListener('click', function(){
+    document.querySelector('#new-paper-bag').addEventListener('click', function(){
+        document.querySelector('#end').className = 'yes-opacity';
+        h1Tag.innerHTML = 'Another Paper Bag';
+        brokeBag.className = 'hide';
+        document.querySelector('#paper-bag-svg').className = 'show';
+        endPaper = 'paper-bag';
+    });
+
+    document.querySelector('#paper-return').addEventListener('click', function(){
         h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#paper-right').className = 'hide';
         document.querySelector('#paper-left').className = 'hide';
@@ -319,6 +532,8 @@
         toteRoute.className = 'show';
         document.querySelector(`#${endPaper}-svg`).className = 'show';
         routeClicked = false;
+        paperCompleted = true;
+        sustainabilityBags()
     });
 
     for( const eachLi of document.querySelectorAll("#repurpose ul li")){
@@ -333,15 +548,18 @@
     }
 
     // Tote
-    document.querySelector('#kept-well').addEventListener('click', function(){
-        document.querySelector('#condition2').className = 'show';
-    });
-
     document.querySelector('#not-throw2').addEventListener('click', function(){
         document.querySelector('#love').className = 'show';
         document.querySelector('#condition2').className = 'selected';
         document.querySelector('#old-tote-svg').className = 'hide';
         document.querySelector('#love-tote-svg').className = 'show';
+    });
+
+    document.querySelector('#throw2').addEventListener('click', function(){
+        document.querySelector('#old-tote-svg').className = 'hide';
+        document.querySelector('#old-trash-tote-svg').className = 'show';
+        h1Tag.innerHTML = 'Trash';
+        document.querySelector('#about-time').className = 'show';
     });
 
     for( const eachLi of document.querySelectorAll("#condition2 ul li")){
@@ -363,5 +581,37 @@
         plasticRoute.className = 'show';
         document.querySelector(`#love-tote-svg`).className = 'show';
         routeClicked = false;
+        toteCompleted = true;
+        sustainabilityBags();
     });
+
+    document.querySelector('#fashion-return').addEventListener('click', function(){
+        h1Tag.innerHTML = 'Which bag do you want to use?';
+        document.querySelector('#tote-right').className = 'hide';
+        document.querySelector('#tote-left').className = 'hide';
+        paperRoute.className = 'show';
+        plasticRoute.className = 'show';
+        document.querySelector(`#trash-tote-svg`).className = 'show';
+        routeClicked = false;
+    });
+
+    document.querySelector('#time-return').addEventListener('click', function(){
+        h1Tag.innerHTML = 'Which bag do you want to use?';
+        document.querySelector('#tote-right').className = 'hide';
+        document.querySelector('#tote-left').className = 'hide';
+        paperRoute.className = 'show';
+        plasticRoute.className = 'show';
+        document.querySelector(`#old-trash-tote-svg`).className = 'show';
+        routeClicked = false;
+    });
+
+    function sustainabilityBags(){
+        if(paperCompleted == true && plasticCompleted == false && toteCompleted == true){
+            defaultText = 'Thank you for choosing sustainability!';
+        } else if(paperCompleted == true && plasticCompleted == true && toteCompleted == true){
+            defaultText = 'Congradulations! You have seen the journey of all bags.';
+        } else {
+            defaultText = 'Which bag do you want to use?';
+        }
+    }
 })();
