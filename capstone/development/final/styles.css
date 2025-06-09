@@ -139,7 +139,7 @@ div ul li:hover{
     border-color: rgb(188, 188, 188);
 }
 
-#textbook ul, #food ul, #condition ul, #condition2 ul, #rain ul, #accident ul, #fashion ul, #about-time ul{
+#textbook ul, #food ul, #condition ul, #condition2 ul, #rain ul, #accident ul, #fashion ul, #about-time ul, #convenience ul{
     grid-template-columns: auto;
 }
 
@@ -147,6 +147,14 @@ div ul li:hover{
 /* ----------------- Left ----------------- */
 #sad img, #drop img, #wet img, #rip img, #trash img{
     height: 100px;
+}
+
+#waves img, #research img{
+    height: 40px;
+}
+
+#plastic-left{
+    gap: 10vh;
 }
 
 /* ----------------- Center ----------------- */

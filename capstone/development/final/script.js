@@ -14,9 +14,13 @@
     let paperCompleted = false;
     let plasticCompleted = false;
     let toteCompleted = false;
-    let defaultText = 'Which bag do you want to use?';
+    let toteBadCompleted = false;
+    let defaultText;
 
     // -------------------------------- Center --------------------------------
+    sustainabilityBags();
+    document.querySelector('#center h1').innerHTML = `${defaultText}`;
+
     // Paper Hover & Click
     startPaper.addEventListener('click', function(){
         document.querySelector('#paper-left').className = 'show';
@@ -136,6 +140,25 @@
     startPlastic.addEventListener('mouseout', function() {
         if (!routeClicked) {
             h1Tag.innerHTML = `${defaultText}`;
+        }
+    });
+
+    // Plate
+    const plateSVG = document.querySelector('#plate');
+    plateSVG.addEventListener('click', function(){
+        preventDefault();
+    });
+    
+    plateSVG.addEventListener('mouseover', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = 'Consuming Convenience';
+            plateSVG.style.cursor = 'default';
+        }
+    });
+        
+    plateSVG.addEventListener('mouseout', function() {
+        if (!routeClicked) {
+            h1Tag.textContent = `${defaultText}`;
         }
     });
 
@@ -383,7 +406,145 @@
         });
     }
     // Plastic
-    
+    document.querySelector('#plastic-school').addEventListener('click', function(){
+        document.querySelector('#waves').className = 'show';
+        document.querySelector('#plastic-location').className = 'selected';
+        setTimeout(function(){
+            startPlastic.className = 'hide';
+            document.querySelector('#microplastic').className = 'show';
+            document.querySelector('#sea-animal').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#plastic-store').addEventListener('click', function(){
+        document.querySelector('#waves').className = 'show';
+        document.querySelector('#plastic-location').className = 'selected';
+        setTimeout(function(){
+            startPlastic.className = 'hide';
+            document.querySelector('#microplastic').className = 'show';
+            document.querySelector('#sea-animal').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#plastic-park').addEventListener('click', function(){
+        document.querySelector('#waves').className = 'show';
+        document.querySelector('#plastic-location').className = 'selected';
+        setTimeout(function(){
+            startPlastic.className = 'hide';
+            document.querySelector('#microplastic').className = 'show';
+            document.querySelector('#sea-animal').className = 'show';
+        },1000)
+    });
+
+    document.querySelector('#plastic-office').addEventListener('click', function(){
+        document.querySelector('#waves').className = 'show';
+        document.querySelector('#plastic-location').className = 'selected';
+        setTimeout(function(){
+            startPlastic.className = 'hide';
+            document.querySelector('#microplastic').className = 'show';
+            h1Tag.innerHTML = 'Microplastic';
+            document.querySelector('#sea-animal').className = 'show';
+        },1000)
+    });
+
+    for( const eachLi of document.querySelectorAll("#plastic-location ul li")){
+        let itemClicked = false;
+        eachLi.addEventListener('click', function(event){
+            if( !itemClicked ){
+                event.target.className = 'selected';
+                document.querySelector('#plastic-location').className = "done";
+                itemClicked = true;
+            }
+        });
+    } 
+
+    let caughtFish;
+    document.querySelector('#salmon').addEventListener('click', function(){
+        document.querySelector('#microplastic').classList = 'hide';
+        document.querySelector('#salmon-svg').className = 'show';
+        h1Tag.innerHTML = 'Salmon';
+        caughtFish = 'salmon';
+        setTimeout(function(){
+            document.querySelector('span').innerHTML = caughtFish;
+            document.querySelector('#caught').className = 'show';
+            document.querySelector('#salmon-svg').className = 'hide';
+            document.querySelector('#salmon-plate-svg').className = 'show';
+        },1000)
+        setTimeout(function(){
+            document.querySelector('#research').className = 'show';
+        },3000)
+        setTimeout(function(){
+            document.querySelector('#convenience').className = 'show';
+        },5000)
+    });
+
+    document.querySelector('#crab').addEventListener('click', function(){
+        document.querySelector('#microplastic').classList = 'hide';
+        document.querySelector('#crab-svg').className = 'show';
+        h1Tag.innerHTML = 'Crab';
+        caughtFish = 'crab';
+        setTimeout(function(){
+            document.querySelector('span').innerHTML = caughtFish;
+            document.querySelector('#caught').className = 'show';
+            document.querySelector('#crab-svg').className = 'hide';
+            document.querySelector('#crab-plate-svg').className = 'show';
+        },1000)
+        setTimeout(function(){
+            document.querySelector('#research').className = 'show';
+        },3000)
+        setTimeout(function(){
+            document.querySelector('#convenience').className = 'show';
+        },5000)
+    });
+
+    document.querySelector('#shrimp').addEventListener('click', function(){
+        document.querySelector('#microplastic').classList = 'hide';
+        document.querySelector('#shrimp-svg').className = 'show';
+        h1Tag.innerHTML = 'Shrimp';
+        caughtFish = 'shrimp';
+        setTimeout(function(){
+            document.querySelector('span').innerHTML = caughtFish;
+            document.querySelector('#caught').className = 'show';
+            document.querySelector('#shrimp-svg').className = 'hide';
+            document.querySelector('#shrimp-plate-svg').className = 'show';
+        },1000)
+        setTimeout(function(){
+            document.querySelector('#research').className = 'show';
+        },3000)
+        setTimeout(function(){
+            document.querySelector('#convenience').className = 'show';
+        },5000)
+    });
+
+    document.querySelector('#clam').addEventListener('click', function(){
+        document.querySelector('#microplastic').classList = 'hide';
+        document.querySelector('#clam-svg').className = 'show';
+        h1Tag.innerHTML = 'Clam';
+        caughtFish = 'clam';
+        setTimeout(function(){
+            document.querySelector('span').innerHTML = caughtFish;
+            document.querySelector('#caught').className = 'show';
+            document.querySelector('#clam-svg').className = 'hide';
+            document.querySelector('#clam-plate-svg').className = 'show';
+        },1000)
+        setTimeout(function(){
+            document.querySelector('#research').className = 'show';
+        },3000)
+        setTimeout(function(){
+            document.querySelector('#convenience').className = 'show';
+        },5000)
+    });
+
+    for( const eachLi of document.querySelectorAll("#sea-animal ul li")){
+        let itemClicked = false;
+        eachLi.addEventListener('click', function(event){
+            if( !itemClicked ){
+                event.target.className = 'selected';
+                document.querySelector('#sea-animal').className = "done";
+                itemClicked = true;
+            }
+        });
+    } 
 
 
     // Tote bag
@@ -442,6 +603,7 @@
     });
 
     document.querySelector('#throw').addEventListener('click', function(){
+        document.querySelector('#tote-right').style.gap = '10vh';
         document.querySelector('#trash').className = 'show';
         startTote.className = 'hide';
         h1Tag.innerHTML = 'Trash';
@@ -525,7 +687,7 @@
     });
 
     document.querySelector('#paper-return').addEventListener('click', function(){
-        h1Tag.innerHTML = 'Which bag do you want to use?';
+        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#paper-right').className = 'hide';
         document.querySelector('#paper-left').className = 'hide';
         plasticRoute.className = 'show';
@@ -534,6 +696,7 @@
         routeClicked = false;
         paperCompleted = true;
         sustainabilityBags()
+        h1Tag.innerHTML = `${defaultText}`
     });
 
     for( const eachLi of document.querySelectorAll("#repurpose ul li")){
@@ -546,6 +709,20 @@
             }
         });
     }
+    // Plastic
+    document.querySelector('#convenience-return').addEventListener('click', function(){
+        // h1Tag.innerHTML = 'Which bag do you want to use?';
+        document.querySelector('#plastic-right').className = 'hide';
+        document.querySelector('#plastic-left').className = 'hide';
+        paperRoute.className = 'show';
+        toteRoute.className = 'show';
+        document.querySelector(`#${caughtFish}-plate-svg`).className = 'hide';
+        document.querySelector('#plate').className = 'show';
+        routeClicked = false;
+        plasticCompleted = true;
+        sustainabilityBags();
+        h1Tag.innerHTML = `${defaultText}`
+    });
 
     // Tote
     document.querySelector('#not-throw2').addEventListener('click', function(){
@@ -574,7 +751,7 @@
     }
 
     document.querySelector('#love-return').addEventListener('click', function(){
-        h1Tag.innerHTML = 'Which bag do you want to use?';
+        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#tote-right').className = 'hide';
         document.querySelector('#tote-left').className = 'hide';
         paperRoute.className = 'show';
@@ -583,33 +760,43 @@
         routeClicked = false;
         toteCompleted = true;
         sustainabilityBags();
+        h1Tag.innerHTML = `${defaultText}`
     });
 
     document.querySelector('#fashion-return').addEventListener('click', function(){
-        h1Tag.innerHTML = 'Which bag do you want to use?';
+        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#tote-right').className = 'hide';
         document.querySelector('#tote-left').className = 'hide';
         paperRoute.className = 'show';
         plasticRoute.className = 'show';
         document.querySelector(`#trash-tote-svg`).className = 'show';
         routeClicked = false;
+        toteBadCompleted = true;
+        sustainabilityBags();
+        h1Tag.innerHTML = `${defaultText}`
     });
 
     document.querySelector('#time-return').addEventListener('click', function(){
-        h1Tag.innerHTML = 'Which bag do you want to use?';
+        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#tote-right').className = 'hide';
         document.querySelector('#tote-left').className = 'hide';
         paperRoute.className = 'show';
         plasticRoute.className = 'show';
         document.querySelector(`#old-trash-tote-svg`).className = 'show';
         routeClicked = false;
+        sustainabilityBags();
+        h1Tag.innerHTML = `${defaultText}`
     });
 
     function sustainabilityBags(){
-        if(paperCompleted == true && plasticCompleted == false && toteCompleted == true){
-            defaultText = 'Thank you for choosing sustainability!';
-        } else if(paperCompleted == true && plasticCompleted == true && toteCompleted == true){
+        if(paperCompleted == true && plasticCompleted == true && toteCompleted == true){
             defaultText = 'Congradulations! You have seen the journey of all bags.';
+        } else if(paperCompleted == true && plasticCompleted == true && toteBadCompleted == true){
+            defaultText = 'Congradulations! You have seen the journey of all bags.';
+        } else if(paperCompleted == true && plasticCompleted == false && toteCompleted == true){
+            defaultText = 'Thank you for choosing sustainability!';
+        } else if(paperCompleted == false && plasticCompleted == true && toteCompleted == false){
+            defaultText = `Life in plastic, it's not fantastic ♪`
         } else {
             defaultText = 'Which bag do you want to use?';
         }
