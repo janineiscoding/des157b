@@ -19,7 +19,7 @@
 
     // -------------------------------- Center --------------------------------
     sustainabilityBags();
-    document.querySelector('#center h1').innerHTML = `${defaultText}`;
+    h1Tag.innerHTML = `${defaultText}`;
 
     // Paper Hover & Click
     startPaper.addEventListener('click', function(){
@@ -246,7 +246,6 @@
     // Paper  
     for( const eachLi of document.querySelectorAll("#paper-location ul li")){
         let itemClicked = false;
-
         eachLi.addEventListener('click', function(event){
             if( !itemClicked ){
                 event.target.className = 'selected';
@@ -406,12 +405,13 @@
         });
     }
     // Plastic
+    const microplastic = document.querySelector('#microplastic');
     document.querySelector('#plastic-school').addEventListener('click', function(){
         document.querySelector('#waves').className = 'show';
         document.querySelector('#plastic-location').className = 'selected';
         setTimeout(function(){
             startPlastic.className = 'hide';
-            document.querySelector('#microplastic').className = 'show';
+            microplastic.className = 'show';
             document.querySelector('#sea-animal').className = 'show';
         },1000)
     });
@@ -421,7 +421,7 @@
         document.querySelector('#plastic-location').className = 'selected';
         setTimeout(function(){
             startPlastic.className = 'hide';
-            document.querySelector('#microplastic').className = 'show';
+            microplastic.className = 'show';
             document.querySelector('#sea-animal').className = 'show';
         },1000)
     });
@@ -431,7 +431,7 @@
         document.querySelector('#plastic-location').className = 'selected';
         setTimeout(function(){
             startPlastic.className = 'hide';
-            document.querySelector('#microplastic').className = 'show';
+            microplastic.className = 'show';
             document.querySelector('#sea-animal').className = 'show';
         },1000)
     });
@@ -441,7 +441,7 @@
         document.querySelector('#plastic-location').className = 'selected';
         setTimeout(function(){
             startPlastic.className = 'hide';
-            document.querySelector('#microplastic').className = 'show';
+            microplastic.className = 'show';
             h1Tag.innerHTML = 'Microplastic';
             document.querySelector('#sea-animal').className = 'show';
         },1000)
@@ -460,7 +460,7 @@
 
     let caughtFish;
     document.querySelector('#salmon').addEventListener('click', function(){
-        document.querySelector('#microplastic').classList = 'hide';
+        microplastic.classList = 'hide';
         document.querySelector('#salmon-svg').className = 'show';
         h1Tag.innerHTML = 'Salmon';
         caughtFish = 'salmon';
@@ -479,7 +479,7 @@
     });
 
     document.querySelector('#crab').addEventListener('click', function(){
-        document.querySelector('#microplastic').classList = 'hide';
+        microplastic.classList = 'hide';
         document.querySelector('#crab-svg').className = 'show';
         h1Tag.innerHTML = 'Crab';
         caughtFish = 'crab';
@@ -498,7 +498,7 @@
     });
 
     document.querySelector('#shrimp').addEventListener('click', function(){
-        document.querySelector('#microplastic').classList = 'hide';
+        microplastic.classList = 'hide';
         document.querySelector('#shrimp-svg').className = 'show';
         h1Tag.innerHTML = 'Shrimp';
         caughtFish = 'shrimp';
@@ -517,7 +517,7 @@
     });
 
     document.querySelector('#clam').addEventListener('click', function(){
-        document.querySelector('#microplastic').classList = 'hide';
+        microplastic.classList = 'hide';
         document.querySelector('#clam-svg').className = 'show';
         h1Tag.innerHTML = 'Clam';
         caughtFish = 'clam';
@@ -548,35 +548,38 @@
 
 
     // Tote bag
+    const toteLocation = document.querySelector('#tote-location');
+    const condition = document.querySelector('#condition');
+
     document.querySelector('#tote-school').addEventListener('click', function(){
         document.querySelector('#continue').className = 'show';
-        document.querySelector('#tote-location').className = 'selected';
+        toteLocation.className = 'selected';
         setTimeout(function(){
-            document.querySelector('#condition').className = 'show';
+            condition.className = 'show';
         },1000)
     });
 
     document.querySelector('#tote-store').addEventListener('click', function(){
         document.querySelector('#continue').className = 'show';
-        document.querySelector('#tote-location').className = 'selected';
+        toteLocation.className = 'selected';
         setTimeout(function(){
-            document.querySelector('#condition').className = 'show';
+            condition.className = 'show';
         },1000)
     });
 
     document.querySelector('#tote-park').addEventListener('click', function(){
         document.querySelector('#continue').className = 'show';
-        document.querySelector('#tote-location').className = 'selected';
+        toteLocation.className = 'selected';
         setTimeout(function(){
-            document.querySelector('#condition').className = 'show';
+            condition.className = 'show';
         },1000)
     });
 
     document.querySelector('#tote-office').addEventListener('click', function(){
         document.querySelector('#continue').className = 'show';
-        document.querySelector('#tote-location').className = 'selected';
+        toteLocation.className = 'selected';
         setTimeout(function(){
-            document.querySelector('#condition').className = 'show';
+            condition.className = 'show';
         },1000)
     });
 
@@ -585,7 +588,7 @@
         eachLi.addEventListener('click', function(event){
             if( !itemClicked ){
                 event.target.className = 'selected';
-                document.querySelector('#tote-location').className = "done";
+                toteLocation.className = "done";
                 itemClicked = true;
             }
         });
@@ -595,8 +598,7 @@
         document.querySelector('#kept-well').className = 'show';
         document.querySelector('#start-tote').className = 'hide';
         document.querySelector('#old-tote-svg').className = 'show';
-        document.querySelector('#condition').className = 'selected';
-        // document.querySelector('#condition').className = 'done';
+        condition.className = 'selected';
         setTimeout(function(){
             document.querySelector('#condition2').className = 'show';
         },1000)
@@ -621,7 +623,7 @@
         eachLi.addEventListener('click', function(event){
             if( !itemClicked ){
                 event.target.className = 'selected';
-                document.querySelector('#condition').className = 'done';
+                condition.className = 'done';
                 itemClicked = true;
             }
         });
@@ -687,7 +689,6 @@
     });
 
     document.querySelector('#paper-return').addEventListener('click', function(){
-        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#paper-right').className = 'hide';
         document.querySelector('#paper-left').className = 'hide';
         plasticRoute.className = 'show';
@@ -711,7 +712,6 @@
     }
     // Plastic
     document.querySelector('#convenience-return').addEventListener('click', function(){
-        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#plastic-right').className = 'hide';
         document.querySelector('#plastic-left').className = 'hide';
         paperRoute.className = 'show';
@@ -751,7 +751,6 @@
     }
 
     document.querySelector('#love-return').addEventListener('click', function(){
-        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#tote-right').className = 'hide';
         document.querySelector('#tote-left').className = 'hide';
         paperRoute.className = 'show';
@@ -764,7 +763,6 @@
     });
 
     document.querySelector('#fashion-return').addEventListener('click', function(){
-        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#tote-right').className = 'hide';
         document.querySelector('#tote-left').className = 'hide';
         paperRoute.className = 'show';
@@ -777,7 +775,6 @@
     });
 
     document.querySelector('#time-return').addEventListener('click', function(){
-        // h1Tag.innerHTML = 'Which bag do you want to use?';
         document.querySelector('#tote-right').className = 'hide';
         document.querySelector('#tote-left').className = 'hide';
         paperRoute.className = 'show';
