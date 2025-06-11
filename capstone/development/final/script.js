@@ -787,9 +787,9 @@
 
     function sustainabilityBags(){
         if(paperCompleted == true && plasticCompleted == true && toteCompleted == true){
-            defaultText = 'Congradulations! You have seen the journey of all bags.';
+            defaultText = 'Congratulations! You have seen the journey of all bags.';
         } else if(paperCompleted == true && plasticCompleted == true && toteBadCompleted == true){
-            defaultText = 'Congradulations! You have seen the journey of all bags.';
+            defaultText = 'Congratulations! You have seen the journey of all bags.';
         } else if(paperCompleted == true && plasticCompleted == false && toteCompleted == true){
             defaultText = 'Thank you for choosing sustainability!';
         } else if(paperCompleted == false && plasticCompleted == true && toteCompleted == false){
